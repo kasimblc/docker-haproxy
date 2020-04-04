@@ -1,4 +1,4 @@
-FROM python:python3
+FROM python:3
  
 LABEL Name=kartaca-flaskapp Version=0.0.1
 EXPOSE 8000

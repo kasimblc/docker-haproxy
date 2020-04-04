@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+    web1:
+        build: flask-hello-world-master
+        container_name: web1
+        ports:
+            - "8001:8000"
+
+    web2:
+        build: flask-hello-world-master
+        container_name: web2
+        ports:
+            - "8002:8000"
+
+    haproxy:
+        build: ./haproxy
+        container_name: haproxy
+        ports:
+            - "8000:8000"
